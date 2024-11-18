@@ -1,3 +1,7 @@
+:root {
+    --primary-color: #36454f;
+}
+
 * {
 	margin: 0;
 	padding: 0;
@@ -10,7 +14,7 @@ body {
 }
 
 header {
-    background-color: #36454f;
+    background-color: var(--primary-color);
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -87,7 +91,7 @@ main {
 }
 
 footer {
-    background-color: #36454f;
+    background-color: var(--primary-color);
     color: #fff;
     line-height: 2rem;
     padding: 0.5rem;
