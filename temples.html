@@ -31,18 +31,14 @@
     <main>
         <h2>Home</h2>
         <section class="album">
-            <figure>
-                <img src="images/church.jpg" alt="Belarus Church">
-                <figcaption>Orthodox church in Baranavichy, Belarus</figcaption>
-            </figure>
-            <figure>
-                <img src="images/church.jpg" alt="Belarus Church">
-                <figcaption>Orthodox church in Baranavichy, Belarus</figcaption>
-            </figure>
-            <figure>
-                <img src="images/church.jpg" alt="Belarus Church">
-                <figcaption>Orthodox church in Baranavichy, Belarus</figcaption>
-            </figure>
+            <script>
+                let figure = '<figure><img src="images/church.jpg" alt="Belarus Church"><figcaption>Orthodox church in Baranavichy, Belarus</figcaption></figure>';
+                let figuresCount = 9;
+
+                for (let i = 1; i <= figuresCount; i++) {
+                    document.write(figure);
+                }
+            </script>
         </section>
     </main>
     <footer>
