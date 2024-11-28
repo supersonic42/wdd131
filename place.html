@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hawaii</title>
+    <meta name="description" content="Hawaii short info">
+    <meta name="author" content="Anton Sanakoev">
+    <link rel="stylesheet" href="styles/place.css">
+    <script src="scripts/place.js" defer></script>
+</head>
+<body>
+    <header>
+        <h1>Hawaii</h1>
+    </header>
+    <main>
+        <picture>
+            <source srcset="images/place/hawaii-large.webp" media="(min-width: 640px)    ">
+            <img src="images/place/hawaii-small.webp" alt="Hawaii">
+        </picture>
+        <section class="data">
+            <h2>Data</h2>
+            <table>
+                <tr>
+                    <td>Area</td>
+                    <td>28,311 km2</td>
+                </tr>
+                <tr>
+                    <td>Population</td>
+                    <td>1,455,271</td>
+                </tr>
+                <tr>
+                    <td>Capital</td>
+                    <td>Honolulu</td>
+                </tr>
+                <tr>
+                    <td>Languages</td>
+                    <td>English, Hawaiian</td>
+                </tr>
+                <tr>
+                    <td>Currency</td>
+                    <td>American dollar</td>
+                </tr>
+                <tr>
+                    <td>Time Zone</td>
+                    <td>UTC−10:00</td>
+                </tr>
+                <tr>
+                    <td>Calling Code</td>
+                    <td>+808</td>
+                </tr>
+                <tr>
+                    <td>Internet TLD</td>
+                    <td>.hawaii</td>
+                </tr>
+            </table>
+        </section>
+        <section class="weather">
+            <h2>Weather</h2>
+            <img src="images/place/weather.svg" alt="Weather">
+            <table>
+                <tr>
+                    <td>Temperature</td>
+                    <td>5 &deg;C</td>
+                </tr>
+                <tr>
+                    <td>Conditions</td>
+                    <td>Sunny</td>
+                </tr>
+                <tr>
+                    <td>Wind</td>
+                    <td>10 km/h</td>
+                </tr>
+                <tr>
+                    <td>Wind Chill</td>
+                    <td class="windChillValue"></td>
+                </tr>
+            </table>
+        </section>
+    </main>
+    <footer>
+        <p>&copy;<span id="currentyear"></span> ☦️ Anton Sanakoev ☦️ Bakuriani, Georgia</p>
+        <p id="lastModified"></p>
+    </footer>
+</body>
+</html>
