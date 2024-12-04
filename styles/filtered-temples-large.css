@@ -1,0 +1,22 @@
+@media (min-width: 640px) {
+    nav {
+        display: block;
+        flex: 0 1 400px;
+    }
+
+	nav ul {
+		display: flex;
+	}
+
+	nav ul li {
+		flex: 1 1 100%;
+	}
+
+    .menu-toggler {
+        display: none;
+    }
+
+    .album {
+        grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+    }
+}

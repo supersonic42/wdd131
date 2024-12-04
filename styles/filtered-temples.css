@@ -1,0 +1,139 @@
+:root {
+    --primary-color: #36454f;
+}
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body {
+	height: 100vh;
+	font-family: 'Roboto', sans-serif;
+}
+
+header {
+    background-color: var(--primary-color);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+}
+
+header h1 {
+    color: #fff;
+    flex: 0 0 auto;
+    padding: 1rem;
+}
+
+header.menu-active h1 {
+    display: none;
+}
+
+header.menu-active nav {
+    display: block;
+}
+
+header.menu-active .menu-toggler {
+    display: none;
+}
+
+header.menu-active .menu-close-btn {
+    display: block;
+    position: absolute;
+    top: 0;
+    right: 6px;
+}
+
+.menu-toggler {
+    flex: 0 0 auto;
+    line-height: 0;
+}
+
+.menu-close-btn {
+    color: #fff;
+    display: none;
+    flex: 0 0 auto;
+    font-size: 30px;
+    text-decoration: none;
+}
+
+nav {
+    display: none;
+    flex: 1 1 100%;
+}
+
+nav ul {
+	list-style-type: none;
+}
+
+nav a {
+    color: #fff;
+	display: block;
+	text-align: center;
+	padding: 1rem;
+	text-decoration: none;
+}
+
+nav a:hover {
+	text-decoration: underline;
+}
+
+nav a.active {
+	color: yellow;
+}
+
+main {
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 1rem 2rem 2rem 2rem;
+}
+
+footer {
+    background-color: var(--primary-color);
+    color: #fff;
+    line-height: 2rem;
+    padding: 0.5rem;
+    text-align: center;
+}
+
+main h2 {
+    margin-bottom: 1rem;
+    text-align: center;
+}
+
+.album {
+    display: grid; 
+    grid-template-columns: repeat(auto-fit, 1fr);
+    grid-gap: 25px;
+    place-items: center;
+}
+
+.album h3 {
+    margin-bottom: 1rem;
+}
+
+.album .temple {
+    background-color: #ebebeb;
+    border: 1px solid #ccc;
+    height: 380px;
+    padding: 1rem;
+    text-align: center;
+    width: 300px;
+}
+
+.album .temple p {
+    margin-bottom: 0.2rem;
+}
+
+.album .temple p span:first-child {
+    color: purple;
+}
+
+.album .temple img {
+    box-shadow: 0 0 10px 4px #aeaeae;
+    height: 200px;
+    margin-top: 1rem;
+    width: 100%;
+}
