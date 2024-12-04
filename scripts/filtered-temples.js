@@ -65,7 +65,7 @@ function createCards(filteredTemples) {
         name.textContent = temple.templeName;
         location.innerHTML = `<span>Location: </span><span>${temple.location}</span>`;
         dedication.innerHTML = `<span>Dedicated: </span><span>${temple.dedicated}</span>`;
-        area.innerHTML = `<span>Size: </span><span>${temple.area}</span>`;
+        area.innerHTML = `<span>Size: </span><span>${temple.area} sq ft</span>`;
 
         img.setAttribute('src', temple.imageUrl);
         img.setAttribute('alt', `${temple.templeName} Temple`);
