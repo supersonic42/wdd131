@@ -1,0 +1,45 @@
+:root {
+    --primary-color: #FF4D4D;
+    --secondary-color: #FFD700;
+    --background-color: #000000;
+    --accent-color: #00FFFF;
+    --text-color: #FFFFFF;
+    --text-color-secondary: #000000;
+    --main-font: "Roboto", serif;
+}
+
+body {
+    background-color: var(--background-color);
+    color: var(--text-color);
+    font-family: var(--main-font);
+    font-size: 16px;
+}
+
+header {
+    text-align: center;
+}
+
+main {
+    margin: 0 auto;
+    width: 960px;
+}
+
+section {
+    background-color: var(--primary-color);
+    margin-bottom: 1rem;
+    padding: 1rem;
+}
+
+section h2 {
+    background-color: var(--secondary-color);
+    box-shadow: 0 0 1px 1px var(--background-color);
+    color: var(--text-color-secondary);
+    margin: 0;
+    padding: 0.5rem;
+    text-align: center;
+}
+
+.accent {
+    color: var(--accent-color);
+    text-shadow: 1px 1px 2px var(--background-color);
+}
