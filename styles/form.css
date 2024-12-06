@@ -1,0 +1,120 @@
+:root {
+    --primary-color: #304C89;
+    --secondary-color: #466cb0;
+    --primary-font-color: #FFF;
+    --secondary-font-color: #333;
+    --main-font: "Roboto", serif;
+    --form-font-size: 16px;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--main-font);
+    font-weight: 400;
+    font-size: 16px;
+    font-style: normal;
+    max-width: 960px;
+    margin: 0 auto;
+}
+
+footer {
+    background-color: var(--primary-color);
+    color: var(--primary-font-color);
+    margin-top: 3rem;
+    padding: 0.5rem;
+    text-align: center;
+}
+
+#lastModified {
+    color: yellow;
+}
+
+header h1 {
+    background-color: var(--primary-color);
+    box-shadow: 0 0 10px 2px rgb(130, 177, 248);
+    color: var(--primary-font-color);
+    padding: 1rem;
+    text-align: center;
+}
+
+#product_review_form {
+    background-color: var(--secondary-color);
+    color: #fff;
+    max-width: 480px;
+    margin: 0 auto;
+    padding: 1rem;
+}
+
+#product_review_form h2 {
+    background-color: var(--primary-color);
+    color: var(--primary-font-color);
+    margin: -1rem -1rem 0 -1rem;
+    padding: 0.5rem 1rem;
+    text-align: center;
+}
+
+#product_review_form section {
+    margin: 1.5rem 0;
+}
+
+#product_review_form label {
+    font-size: var(--form-font-size);
+}
+
+#product_review_form .label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-size: 18px;
+}
+
+#product_review_form input[type="text"],
+#product_review_form input[type="date"],
+#product_review_form select {
+    font-size: var(--form-font-size);
+    height: 44px;
+    padding: 0.5rem;
+    width: 100%;
+}
+
+#product_review_form textarea {
+    font-size: var(--form-font-size);
+    padding: 0.5rem;
+    width: 100%;
+}
+
+#rating_wrapper {
+    display: flex;
+}
+
+.star_wrapper {
+    flex: 0 0 20%;
+    padding: 0 1rem;
+    text-align: center;
+}
+
+.star_wrapper span {
+    display: block;
+    margin: 0 !important;
+}
+
+.feature_wrapper {
+    display: block;
+    margin-bottom: 0.5rem;
+}
+
+.feature_wrapper input[type="checkbox"] {
+    margin: 4px 6px 0 0;
+    vertical-align: text-top;
+}
+
+#product_review_form input[type="submit"] {
+    background-color: var(--primary-color);
+    color: var(--primary-font-color);
+    font-family: var(--main-font);
+    font-size: 20px;
+    padding: 0.5rem 1rem;
+    width: 100%;
+}
