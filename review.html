@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Review Page</title>
+</head>
+<body>
+    <script>
+        let count = localStorage.getItem('count') || 0;
+        count++;
+
+        document.write(`Number of reviews: ${count}`);
+
+        localStorage.setItem('count', count);
+    </script>
+</body>
+</html>
