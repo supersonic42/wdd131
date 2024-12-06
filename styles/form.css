@@ -56,7 +56,7 @@ header h1 {
     text-align: center;
 }
 
-#product_review_form section {
+#product_review_form .section {
     margin: 1.5rem 0;
 }
 
