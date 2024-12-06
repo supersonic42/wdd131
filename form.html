@@ -23,27 +23,27 @@
             <section>
                 <label>
                     <span class="label">Product Name *</span>
-                    <select name="product_name" id="product_name" required>
-                        <option value="" disabled selected>-Choose a Product-</option>
+                    <select name="product_name" id="product_name" required="">
+                        <option value="" disabled="" selected="">-Choose a Product-</option>
                     </select>
                 </label>
             </section>
 
             <section>
                 <label class="label">Overall Rating *</label>
-                <div id="rating_wrapper"></div>
+                <div id="rating_wrapper"><label class="star_wrapper"><span>☆</span><input id="star1" type="radio" name="rating" value="1" required=""></label><label class="star_wrapper"><span>☆☆</span><input id="star2" type="radio" name="rating" value="2" required=""></label><label class="star_wrapper"><span>☆☆☆</span><input id="star3" type="radio" name="rating" value="3" required=""></label><label class="star_wrapper"><span>☆☆☆☆</span><input id="star4" type="radio" name="rating" value="4" required=""></label><label class="star_wrapper"><span>☆☆☆☆☆</span><input id="star5" type="radio" name="rating" value="5" required=""></label></div>
             </section>
 
             <section>
                 <label>
                     <span class="label">Date of Installation *</span>
-                    <input id="date" type="date" placeholder="dd-mm-yyyy" required>
+                    <input id="date" type="date"required="">
                 </label>
             </section>
 
             <section>
                 <label class="label">Useful features</label>
-                <div id="useful_features_wrapper"></div>
+                <div id="useful_features_wrapper"><label class="feature_wrapper"><input type="checkbox" id="useful_feature_durability" name="useful_feature[]" value="durability"><span>Durability</span></label><label class="feature_wrapper"><input type="checkbox" id="useful_feature_ease_of_use" name="useful_feature[]" value="ease_of_use"><span>Ease of Use</span></label><label class="feature_wrapper"><input type="checkbox" id="useful_feature_performance" name="useful_feature[]" value="performance"><span>Performance</span></label><label class="feature_wrapper"><input type="checkbox" id="useful_feature_design" name="useful_feature[]" value="design"><span>Design</span></label></div>
             </section>
 
             <section>
