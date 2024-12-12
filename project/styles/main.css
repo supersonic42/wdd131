@@ -1,11 +1,17 @@
+/* Base Style */
 :root {
     --primary-color: #FF4D4D;
     --secondary-color: #FFD700;
-    --background-color: #000000;
+    --background-color: #222222;
     --accent-color: #00FFFF;
     --text-color: #FFFFFF;
-    --text-color-secondary: #000000;
-    --main-font: "Roboto", serif;
+    --text-color-secondary: #222;
+    --main-font: "Pixelify Sans", serif;
+    --content-font: "Montserrat", serif;
+}
+
+* {
+    box-sizing: border-box;
 }
 
 body {
@@ -15,13 +21,107 @@ body {
     font-size: 16px;
 }
 
+header,
+main,
+footer {
+    margin: 0 auto;
+    max-width: 960px;
+    width: 100%;
+}
+
 header {
     text-align: center;
 }
 
+header h1 {
+    font-weight: 400;
+}
+
 main {
-    margin: 0 auto;
-    width: 960px;
+    border: 4px solid #555;
+    display: flex;
+    margin: 1rem auto;
+}
+
+.content {
+    background-color: var(--primary-color);
+    font-family: var(--content-font);
+    flex: 1 1 auto;
+    padding: 0.5rem;
+}
+
+aside {
+    border-right: 4px solid #555;
+    height: 100%;
+    min-height: 200;
+    width: 200px;
+}
+
+nav {
+    list-style: none;
+}
+
+nav li a {
+    background-color: var(--secondary-color);
+    color: var(--text-color-secondary);
+    display: block;
+    padding: 0.5rem;
+    text-decoration: none;
+    text-align: center;
+    text-transform: uppercase;
+    width: 100%;
+}
+
+nav li:not(:last-child) a {
+    border-bottom: 4px solid #555;
+}
+
+nav li a:hover {
+    background-color: #444;
+    color: var(--text-color);
+}
+
+footer {
+    background-color: var(--secondary-color);
+    border: 4px dashed #555;
+    color: var(--text-color-secondary);
+    line-height: 2rem;
+    text-align: center;
+}
+
+footer ul {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+footer ul li {
+    flex: 1 1 25%;
+}
+
+footer ul li a {
+    background-color: var(--secondary-color);
+    color: var(--text-color-secondary);
+    display: block;
+    padding: 0.5rem;
+    text-decoration: none;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+footer ul li a:hover {
+    background-color: #444;
+    color: var(--text-color);
+}
+
+footer ul li a img {
+    margin-right: 4px;
+    vertical-align: top;
+}
+
+.reddit-icon {
+    margin-top: -3px;
 }
 
 section {
@@ -42,4 +142,116 @@ section h2 {
 .accent {
     color: var(--accent-color);
     text-shadow: 1px 1px 2px var(--background-color);
+}
+
+/* Main Style */
+.desktop-header-wrapper {
+    background-color: var(--secondary-color);
+    border: 4px solid #555;
+    box-shadow: 0 0 1px 1px var(--background-color);
+    color: var(--text-color-secondary);
+    display: flex;
+    align-items: center;
+    margin: 0;
+    padding: 0 0.5rem;
+    text-align: center;
+}
+
+.pixel-pulse-logo-wrapper {
+    font-size: 0;
+    margin-right: 0.5rem;
+}
+
+/* Mobile Menu */
+.mobile-menu {
+    display: none;
+    flex-direction: column;
+    top: 60px;
+    left: 0;
+    background-color: var(--primary-color);
+    width: 100%;
+}
+
+.mobile-menu a {
+    color: white;
+    text-decoration: none;
+    padding: 10px 20px;
+    display: block;
+    border: 2px solid #555;
+}
+
+.mobile-menu a:first-child {
+    border-top-width: 4px;
+}
+
+.mobile-menu a:hover {
+    background-color: #555;
+}
+
+.burger {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 20px;
+    cursor: pointer;
+}
+
+.burger div {
+    height: 4px;
+    background-color: #333;
+    border-radius: 2px;
+}
+
+.mobile-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: var(--secondary-color);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    color: var(--text-color-secondary);
+    font-size: 30px;
+}
+
+#mobile-menu-toggle {
+    display: none;
+}
+
+#mobile-menu-toggle:checked + .mobile-menu {
+    display: flex;
+}
+
+.mobile-header-wrapper {
+    display: none;
+    border: 4px solid #555;
+}
+
+@media screen and (max-width: 640px) {
+    .mobile-header-wrapper {
+        display: block;
+    }
+
+    .desktop-header-wrapper {
+        display: none;
+    }
+
+    aside {
+        display: none;
+    }
+
+    footer ul {
+        display: block;
+    }
+
+    footer ul li a {
+        padding-left: 45%;
+        position: relative;
+        text-align: left;
+    }
+
+    footer ul li a img {
+        margin-left: -36px;
+        position: absolute;
+    }
 }
