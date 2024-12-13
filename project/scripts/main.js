@@ -81,7 +81,7 @@ async function loadNews() {
         newsContent += `
             <section class="news">
                 <div class="news-img-wrapper">
-                    <img src="${newsItem.imgPath}" alt="${newsItem.title}">
+                    <img src="${newsItem.imgPath}" alt="${newsItem.title}" loading="lazy">
                 </div>
                 <div class="news-content">
                     <h2>${newsItem.title}</h2>
@@ -123,7 +123,7 @@ async function loadGuides() {
         guidesContent += `
             <section class="guide">
                 <div class="guide-img-wrapper">
-                    <img src="${guide.imgPath}" alt="${guide.title}">
+                    <img src="${guide.imgPath}" alt="${guide.title}" loading="lazy">
                 </div>
                 <div class="guide-content">
                     <h2>${guide.title}</h2>
