@@ -52,7 +52,7 @@
 }
 
 .star_wrapper {
-    flex: 0 0 20%;
+    flex: 0 1 20%;
     padding: 0 1rem;
     text-align: center;
 }
@@ -81,4 +81,14 @@
     font-weight: 700;
     padding: 0.5rem 1rem;
     width: 100%;
+}
+
+@media screen and (max-width: 500px) {
+    #rating_wrapper {
+        flex-direction: column;
+    }
+
+    .star_wrapper {
+        padding: 0.5rem 1rem;
+    }
 }

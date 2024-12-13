@@ -193,9 +193,9 @@ async function loadReview() {
 async function loadHome() {
     content.innerHTML = spinnerHTML;
 
-    await sleep(3000);
+    await sleep(300);
 
-    content.innerHTML = 'Welcome, Gamer!';
+    content.innerHTML = '<h2 style="margin: 0;">Welcome, Gamer!</h2>';
 }
 
 window.addEventListener('hashchange', onHashChange);
