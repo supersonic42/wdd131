@@ -1,0 +1,56 @@
+<link rel="stylesheet" href="styles/form.css">
+<form id="review-form" action="review.html" method="get">
+    <h2>Game Review</h2>
+
+    <div class="section">
+        <label>
+            <span class="label">Game Name *</span>
+            <select name="game_name" id="game_name" required="">
+                <option value="" disabled="" selected="">- Choose Game -</option>
+            </select>
+        </label>
+    </div>
+
+    <div class="section">
+        <label class="label">Rating *</label>
+        <div id="rating_wrapper">
+            <label class="star_wrapper"><span>☆</span><input id="star1" type="radio" name="rating" value="1" required=""></label>
+            <label class="star_wrapper"><span>☆☆</span><input id="star2" type="radio" name="rating" value="2" required=""></label>
+            <label class="star_wrapper"><span>☆☆☆</span><input id="star3" type="radio" name="rating" value="3" required=""></label>
+            <label class="star_wrapper"><span>☆☆☆☆</span><input id="star4" type="radio" name="rating" value="4" required=""></label>
+            <label class="star_wrapper"><span>☆☆☆☆☆</span><input id="star5" type="radio" name="rating" value="5" required=""></label>
+        </div>
+    </div>
+
+    <div class="section">
+        <label>
+            <span class="label">Date of Buying *</span>
+            <input id="date" name="date" type="date" required="">
+        </label>
+    </div>
+
+    <div class="section">
+        <label>
+            <span class="label">Review *</span>
+            <textarea name="written_review" id="written_review" rows="10"></textarea>
+        </label>
+    </div>
+
+    <div class="section">
+        <label class="label">Aspects you liked most</label>
+        <div id="useful_features_wrapper">
+            <label class="feature_wrapper"><input type="checkbox" id="useful_feature_gameplay" name="useful_features[]" value="gameplay"><span>Gameplay</span></label>
+            <label class="feature_wrapper"><input type="checkbox" id="useful_feature_scenario" name="useful_features[]" value="scenario"><span>Scenario</span></label>
+            <label class="feature_wrapper"><input type="checkbox" id="useful_feature_characters" name="useful_features[]" value="characters"><span>Characters</span></label>
+        </div>
+    </div>
+
+    <div class="section">
+        <label>
+            <span class="label">Your Name (optional)</span>
+            <input type="text" id="username" name="username">
+        </label>
+    </div>
+
+    <input type="submit" value="Post Review">
+</form>

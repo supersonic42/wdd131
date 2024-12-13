@@ -10,6 +10,21 @@ for (const mobileMenuLink of mobileMenuLinks) {
     });
 }
 
+const games = [
+    {
+        id: 1,
+        title: "World of Warcraft",
+    },
+    {
+        id: 2,
+        title: "Diablo 4",
+    },
+    {
+        id: 3,
+        title: "Elden Ring",
+    },
+];
+
 function onHashChange() {
     const hash = window.location.hash.slice(1);
 
@@ -124,9 +139,55 @@ async function loadGuides() {
 async function loadReview() {
     content.innerHTML = spinnerHTML;
 
-    await sleep(1000);
+    await sleep(300);
 
-    content.innerHTML = '';
+    try {
+        const response = await fetch('form.html');
+
+        if (!response.ok) throw new Error(`Failed to load form: ${response.status}`);
+
+        const formHtml = await response.text();
+
+        content.innerHTML = formHtml;
+    } catch (error) {
+        console.error(error);
+        content.innerHTML = 'Error loading form.';
+    }
+
+    // Form events
+    const form = document.getElementById('review-form');
+    const gameNameSelector = document.getElementById('game_name');
+
+    games.forEach(game => {
+        let option = document.createElement('option');
+        option.setAttribute('value', game.id);
+        option.innerText = game.title;
+    
+        gameNameSelector.append(option);
+    });
+
+    form.addEventListener('submit', function(e) {
+        e.preventDefault();
+
+        let reviews = localStorage.getItem('reviews') !== null ? JSON.parse(localStorage.getItem('reviews')) : {};
+        let selectedValue = gameNameSelector.options[gameNameSelector.selectedIndex].value
+
+        reviews[selectedValue] = reviews.hasOwnProperty(selectedValue) ? reviews[selectedValue] + 1 : 1;
+
+        localStorage.setItem('reviews', JSON.stringify(reviews));
+
+        let reviewsResult = "<section><h2>Number of reviews</h2>";
+        console.log(games);
+        for (const key in reviews) {
+            const gameIndex = games.findIndex(obj => obj['id'] === parseInt(key));
+            
+            reviewsResult += `<b>${games[gameIndex].title}</b>: ${reviews[key]}<br>`;
+        }
+
+        reviewsResult += '</section';
+
+        content.innerHTML = reviewsResult;
+    });
 }
 
 async function loadHome() {
